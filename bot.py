@@ -15,7 +15,7 @@ main_menu = []
 @yb.add_handler(button='/telemost')
 def telemost_button(update):
     meeting = tm.create_meeting(AccessLevel.ORGANIZATION)
-    yb.send_message(f'Создана встреча: {meeting.join_url}', update)
+    yb.send_message(f'Создана встреча: ```{meeting.join_url}```', update)
     send_menu(update, main_menu)
 
 
